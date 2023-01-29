@@ -1,0 +1,23 @@
+Some notes to remember.
+
+Screenshots and grabbing hrefs with Puppeteer:
+
+// await page.screenshot({ path: `beforeclick.png` });
+// const ref = await page.evaluate(anchor => anchor.getAttribute('href'), selector);
+
+// await must be inside an async function (as you know). Call an anonymous async func like: 
+(async() => {
+    // etc.
+});
+
+// To fire off a foreach as a group, but respond when done,
+// must use a Promise.all with a map inside:
+
+    await Promise.all(list.map(async (l) => {
+        const r = await someAsyncFunction(browser, l);
+        console.log("Do something per async call");
+    }));
+
+    await cleanup();
+
+    return promisedObjectAfterAsyncShananigans;

@@ -1,0 +1,15 @@
+{
+  "name": "imgscraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Use headless browser to scrape and name images",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "walter",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^19.5.2"
+  }
+}
