@@ -1,0 +1,9 @@
+# Dependencies
+node_modules
+
+# Presumably just .csv files you will need
+Input
+
+# Editors
+.vs
+.vscode
