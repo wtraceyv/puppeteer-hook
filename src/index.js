@@ -3,15 +3,17 @@
  * Handle initial logging and send every url to grab pics to scrape, download, name
  */
 
+import config from "../config.js" ;
+
 import n from "./naming.js";
 import s from "./scrape.js";
 import r from "./read.js";
 import d from "./download.js";
 
 // must be exported csv, pls
-const dataFile = "C:\\Users\\walter\\Desktop\\GM\\ImgScraper\\Input\\Pure Updates.csv";
-const downloadTo = "C:\\Users\\walter\\Desktop\\scraped\\";
-const pagesPerStage = 3;
+const dataFile = config.dataFile;
+const downloadTo = config.downloadTo;
+const pagesPerStage = config.pagesPerStage;
 
 // Parse csv for array of objects to use
 const csvDataAsArrays = r.inputToObjects(dataFile);
